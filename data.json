@@ -1,0 +1,17 @@
+{
+    "name" : "关键词过滤",
+    "description" : "维护群秩序，按关键词过滤消息",
+    "class" : [
+        "Boot"
+    ],
+    "author" : "Inkedus",
+    "url" : "http://node.tax",
+    "version" : 1.2,
+    "post_type" : {
+        "message" : {
+            "group" : [
+                
+            ]
+        }
+    }
+}
