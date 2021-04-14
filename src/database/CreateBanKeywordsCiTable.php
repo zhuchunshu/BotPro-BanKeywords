@@ -23,6 +23,7 @@ class CreateBanKeywordsCiTable extends Migration
                 $table->string('event')->comment('触发事件')->default('撤回');
                 $table->string('events')->comment('第二事件')->nullable();
                 $table->integer('ban_time')->comment('禁言时长')->nullable();
+                $table->integer('ban_time2')->comment('撤回触发的禁言时长')->nullable();
                 $table->timestamps();
             });
         }

@@ -24,9 +24,9 @@ class BankeywordsCiController extends Controller
     {
         return Grid::make(new BankeywordsCi(), function (Grid $grid) {
             $grid->column('id')->sortable();
-            $grid->column('content');
-            $grid->column('type');
-            $grid->column('event');
+            $grid->column('content','敏感词');
+            $grid->column('type','触发条件');
+            $grid->column('event','触发事件');
 
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
@@ -71,7 +71,7 @@ class BankeywordsCiController extends Controller
                 $form->select('events','撤回并且')
                 ->options(['禁言' => '禁言', '踢出' => '踢出', '踢出拉黑' => '踢出并拉黑'])
                 ->when('禁言',function(Form $form){
-                    $form->number('ban_time', '禁言时长(分钟)')->required()->max('43200')->min(1);
+                    $form->number('ban_time2', '禁言时长(分钟)')->required()->max('43200')->min(1);
                 });
             })
             ->required();

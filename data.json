@@ -10,7 +10,8 @@
     "post_type" : {
         "message" : {
             "group" : [
-                
+                "Message\\JingqueController",
+                "Message\\MohuController"
             ]
         }
     }
